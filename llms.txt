@@ -1,0 +1,8 @@
+this llms.txt file is designed to help LLMs better understand and index this website.
+
+# schneidermedia.online
+
+## Home
+
+[Schneidermedia](https://schneidermedia.online): 
+
