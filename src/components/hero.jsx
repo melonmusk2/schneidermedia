@@ -1,8 +1,5 @@
-import { 
-  Play, 
-  ChevronRight, 
-} from 'lucide-react';
 import Vid from '../assets/vid.webm'
+import Vidmp4 from "../assets/vid.mp4"
 
 import React, { useRef, useEffect } from 'react';
 
@@ -11,18 +8,28 @@ const Video = () => {
 
   useEffect(() => {
     if (videoRef.current) {
-      videoRef.current.play().catch(error => console.log("Autoplay prevented:", error));
+      const playPromise = videoRef.current.play();
+      if (playPromise !== undefined) {
+        playPromise.catch((error) => {
+          console.log('Autoplay wurde von iOS blockiert:', error);
+        });
+      }
+      videoRef.current.defaultMuted = true;
+      videoRef.current.muted = true;
     }
+    
   }, []);
 
   return (
     <video 
       ref={videoRef} 
-      src={Vid} 
-      type="video/webm"
-      muted
       loop
+      playsinline
+      autoPlay
+      preload="auto"
     >
+      <source src={Vidmp4} type="video/mp4" />
+      
       Your browser does not support the video tag.
     </video>
   );
@@ -40,7 +47,7 @@ const Hero = () => {
                    Ich begleite dich von der ersten Idee bis zum <span className="text-cyan-600 font-semibold">perfekten Bild</span> -  maßgeschneiderte Foto- und Videoproduktionen für Hochzeiten, Immobilien, Portraits und besondere Momente.
                  </p>
                </div>
-                 <div className='max-w-350 px-6 mx-auto grid gap-2 items-center'>
+                 <div className='max-w-330 px-6 mx-auto grid gap-2 items-center'>
                  <div className=" overflow-hidden rounded-xl shadow-2xl">
                   <Video/>
                  </div>

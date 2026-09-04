@@ -2,7 +2,7 @@ import App2 from "./App2";
 import Footer from "./components/footer";
 import { Route, Routes } from "react-router-dom"
 import Impressum from "./components/Impressum";
-import Kontakt from "./components/Kontakt";
+import Kontakt from "./components/kontakt";
 import Header from "./components/header"
 
 

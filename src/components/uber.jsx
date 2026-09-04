@@ -1,5 +1,4 @@
 import Me from '../assets/Avatar2.webp'
-import Logo from '../assets/logo_2.svg'
 import {motion} from 'framer-motion' 
 import {fadeIn} from '../../variants' 
 
@@ -10,7 +9,7 @@ export default function Uber() {
         <div class="container mx-auto px-4 text-center">
             <h2 class="text-5xl font-bold font-primary mb-12">Über mich</h2>
             <div class="flex font-secondary flex-col md:flex-row items-center justify-center gap-10">
-               <motion.img variants={fadeIn('right', 0.2)}
+               <motion.img alt='Mika' variants={fadeIn('right', 0.2)}
           initial="hidden"
           whileInView={"show"}
           viewport={{once: false, amount: 0.3}} className='size-96 rounded-xl' src={Me}/>

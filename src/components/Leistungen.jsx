@@ -1,20 +1,10 @@
 import React, { useState } from 'react';
-import { 
-  Play, 
-  CheckCircle, 
-  ChevronRight, 
-  ArrowLeft, 
-  Send, 
-  Video, 
-  Users, 
-  Share2, 
-  Award, 
-  Film, 
-  Gem,
-  Camera,
-  House,
-  Laptop,
-} from 'lucide-react';
+import Film from "lucide-react/dist/esm/icons/film.mjs"
+import Gem from "lucide-react/dist/esm/icons/gem.mjs"
+import Camera from "lucide-react/dist/esm/icons/camera.mjs"
+import House from "lucide-react/dist/esm/icons/house.mjs"
+import Laptop from "lucide-react/dist/esm/icons/laptop.mjs"
+
 import hochzeit from '../assets/hochzeit.webp'
 import fotografie from '../assets/fotografie.webp'
 import Videopro from '../assets/videopro.webp'
@@ -147,7 +137,7 @@ const Leistungen = () => {
                 </div>
                 <div className="aspect-video bg-neutral-900 rounded-2xl border border-neutral-800 overflow-hidden relative">
                   <div className="absolute inset-0 flex items-center justify-center text-neutral-600 font-mono text-sm">
-                    <img src={item.img}/>
+                    <img alt='leistung' src={item.img}/>
                   </div>
                 </div>
               </div>

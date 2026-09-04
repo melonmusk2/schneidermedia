@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Mail, MessageCircle, Copy, Check,  } from 'lucide-react';
 
 
-export default function ContactPage() {
+export default function Kontakt() {
   const [copied, setCopied] = useState(false);
   const email = "mika.schneider@schneidermedia.online";
 

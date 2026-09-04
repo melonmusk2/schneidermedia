@@ -8,8 +8,8 @@ const Header = () => {
       <header className="sticky top-0 z-50 backdrop-blur-md border-b border-neutral-800/10">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           <div className="flex items-left gap-2">
-             <Link href='#' alt='Logo' to='hero' activeClass='active' smooth={true} spy={true} offset={-200}>
-            <img className='Logosz' src={Logo} />
+             <Link href='#'  to='hero' activeClass='active' smooth={true} spy={true} offset={-200}>
+            <img className='Logosz' alt='Logo' src={Logo} />
             </Link>
           </div>
 
