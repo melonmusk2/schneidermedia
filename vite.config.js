@@ -14,5 +14,19 @@ export default defineConfig({
   server: {
     port: 3000,
   },
-  base: '/'
+  base: '/',
+  build: {
+    minify: 'esbuild', // standardmäßig aktiviert
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            if (id.includes('lucide-react')) return 'vendor-icons';
+            if (id.includes('framer-motion')) return 'vendor-animation';
+            if (id.includes('react')) return 'vendor-core';
+          }
+        },
+      },
+    },
+  },
 });
