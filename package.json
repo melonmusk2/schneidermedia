@@ -16,6 +16,8 @@
   "dependencies": {
     "@tailwindcss/vite": "^4.3.3",
     "bootstrap": "^5.3.8",
+    "contentful": "^11.12.10",
+    "dotenv": "^17.4.2",
     "firebase": "^12.17.1",
     "framer-motion": "^13.1.1",
     "lucide-react": "^1.33.0",
